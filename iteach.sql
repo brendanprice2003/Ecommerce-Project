@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2023 at 11:54 PM
+-- Generation Time: Apr 11, 2023 at 03:04 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -77,10 +77,26 @@ CREATE TABLE `users` (
   `name` varchar(50) NOT NULL,
   `surname` varchar(50) NOT NULL,
   `dob` date NOT NULL,
-  `phone` int(13) NOT NULL,
+  `phone` varchar(13) NOT NULL,
   `type` varchar(1) NOT NULL,
   `password` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `email`, `name`, `surname`, `dob`, `phone`, `type`, `password`) VALUES
+(354001, 'olivia.smith@gmail.com', 'Olivia', 'Smith', '1992-05-12', '07912345678', 'S', '#Olivia92!'),
+(354002, 'ethan.johnson@hotmail.com', 'Ethan', 'Johnson', '1987-09-18', '07823456789', 'T', '#Ethan87@'),
+(354003, 'chloe.brown@yahoo.co.uk', 'Chloe', 'Brown', '1996-03-05', '07734567890', 'S', '#Chloe96%'),
+(354004, 'samuel.davis@outlook.com', 'Samuel', 'Davis', '1985-11-21', '07545678901', 'T', '#Samuel85^'),
+(354005, 'amelia.wilson@gmail.com', 'Amelia', 'Wilson', '1999-07-07', '07456789012', 'S', '#Amelia99*'),
+(354006, 'william.taylor@yahoo.co.uk', 'William', 'Taylor', '1990-02-14', '07367890123', 'S', '#William90$'),
+(354007, 'emily.anderson@hotmail.com', 'Emily', 'Anderson', '1993-12-03', '07278901234', 'S', '#Emily93&'),
+(354008, 'daniel.jackson@gmail.com', 'Daniel', 'Jackson', '1989-06-28', '07189012345', 'S', '#Daniel89+'),
+(354009, 'sophia.clark@yahoo.co.uk', 'Sophia', 'Clark', '1991-10-09', '07090123456', 'S', '#Sophia91%'),
+(354010, 'benjamin.roberts@outlook.com', 'Benjamin', 'Roberts', '1988-04-17', '07901234567', 'T', '#Benjamin88^');
 
 --
 -- Indexes for dumped tables
@@ -133,7 +149,7 @@ ALTER TABLE `lessons`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=354011;
 
 --
 -- Constraints for dumped tables
